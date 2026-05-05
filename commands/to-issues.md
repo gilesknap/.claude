@@ -55,6 +55,21 @@ For each approved slice, publish a new issue to the issue tracker. Use the issue
 
 Publish issues in dependency order (blockers first) so you can reference real issue identifiers in the "Blocked by" field.
 
+### 6. Tell the user how to consume them
+
+Each slice is meant to be picked up in **its own context**. Do not implement multiple slices in a single Claude session — context bloat undermines reviewability, blurs the per-slice commit discipline, and means a single mistake mid-stream contaminates everything that follows.
+
+After publishing, tell the user explicitly:
+
+> Each slice should be implemented in its own context. Either:
+>
+> - Run `/clear` between slices and pick them up one at a time in fresh sessions, OR
+> - Spawn one subagent per non-blocked slice and let them work in parallel (each subagent gets its own context).
+>
+> Don't pick up the next slice in the same session you finished the last one in.
+
+If the agent that ran `/to-issues` is the same agent that would naturally pick up slice #1: stop after publishing. Hand back to the user. Let them start a fresh session.
+
 <issue-template>
 ## Parent
 
