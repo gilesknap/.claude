@@ -1,0 +1,15 @@
+# Deny everything at the top level by default.
+# Future Claude Code versions may add new runtime/state directories — those
+# stay ignored unless you explicitly allowlist them below.
+/*
+
+# Allowlist: authored config and content only.
+!/.gitignore
+!/commands/
+!/skills/
+!/agents/
+!/hooks/
+!/keybindings.json
+!/statusline-command.sh
+!/package.json
+!/settings.json
