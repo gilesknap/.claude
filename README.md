@@ -21,7 +21,8 @@ For a one-line summary of every command and skill, run `/toolbox` from inside Cl
 
 ## Use
 
-Clone into `~/.claude/`, or selectively copy individual commands/skills into your own. Most things assume Claude Code ≥ the version that introduced skills; see [Anthropic's docs](https://docs.claude.com/en/docs/claude-code/overview) if anything looks unfamiliar.
+Clone into `~/.claude/`, or selectively copy individual commands/skills into your own. Most things assume Claude Code ≥ the version that introduced skills; see [Anthropic's docs](https://docs.claude.com/en/docs/claude-code/overview) if anything looks unfamiliar. Or even better,
+here is [an interactive summary of the .claude folder](https://code.claude.com/docs/en/claude-directory#explore-the-directory)
 
 `settings.json` will likely need adjustment for your environment — at minimum the `permissions.allow` list and any plugin choices.
 
