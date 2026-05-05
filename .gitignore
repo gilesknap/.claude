@@ -5,6 +5,7 @@
 
 # Allowlist: authored config and content only.
 !/.gitignore
+!/README.md
 !/commands/
 !/skills/
 !/agents/
